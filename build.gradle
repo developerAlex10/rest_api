@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version '2.12.0'
+}
+
+group = 'me.ster'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:6.0.1'
+    testImplementation 'io.rest-assured:rest-assured:6.0.0'
+    testImplementation 'io.qameta.allure:allure-junit5:2.32.0'
+    testImplementation 'io.qameta.allure:allure-rest-assured:2.32.0'
+    testCompileOnly 'org.projectlombok:lombok:1.18.42'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.42'
+    testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.18.0'
+    testImplementation 'com.github.javafaker:javafaker:1.0.2'
+    testImplementation 'org.assertj:assertj-core:3.27.7'
+}
+
+allure {
+    version = '2.32.0'
+}
+
+test {
+    useJUnitPlatform()
+    systemProperty 'junit.jupiter.execution.parallel.enabled', 'true'
+    systemProperty 'junit.jupiter.execution.parallel.mode.default', 'concurrent'
+    systemProperty 'junit.jupiter.execution.parallel.config.fixed.parallelism', '4'
+}
