@@ -1,4 +1,4 @@
-package extensions;
+package dto.common;
 
 import api.ApiClient;
 import lombok.AllArgsConstructor;

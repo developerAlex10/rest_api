@@ -6,7 +6,7 @@ import dto.request.GameRequest;
 import dto.response.GameCreateResponse;
 import dto.response.UserInfoResponse;
 import extensions.UserExtension;
-import extensions.UserSession;
+import dto.common.UserSession;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
