@@ -30,7 +30,7 @@ public class GameTests {
     @Test
     @DisplayName("Регистрация пользователя происходит через Extension")
     @Description("Проверяем, что пользователь создан (токен не пустой)")
-    void userIsCreated() {
+    void userCreatedTest() {
         // 1. Получить сессию пользователя
         UserSession session = getSession();
         // 2. Проверить, что токен получен
@@ -40,7 +40,7 @@ public class GameTests {
     @Test
     @DisplayName("Добавление игры с минимальными параметрами")
     @Description("Проверяем успешное создание игры и получение gameId")
-    void addMinimalGame() {
+    void addMinimalGameTest() {
         // 1. Получить данные пользователя
         UserSession session = getSession();
         ApiClient api = session.getApiClient();
@@ -57,7 +57,7 @@ public class GameTests {
     @Test
     @DisplayName("Добавление игры со случайными параметрами")
     @Description("Проверяем создание игры с полностью случайными данными")
-    void addRandomGame() {
+    void addRandomGameTest() {
         // 1. Получить данные пользователя
         UserSession session = getSession();
         ApiClient api = session.getApiClient();
@@ -75,7 +75,7 @@ public class GameTests {
     @Test
     @DisplayName("Обновление DLC существующей игры")
     @Description("Создаём игру, затем обновляем её DLC и проверяем изменения")
-    void updateGameDlcs() {
+    void updateGameDlcsTest() {
         // 1. Получить данные пользователя
         UserSession session = getSession();
         ApiClient api = session.getApiClient();
@@ -104,7 +104,7 @@ public class GameTests {
     @Test
     @DisplayName("Получение информации о пользователе после регистрации")
     @Description("Проверяем, что после регистрации у пользователя нет игр, логин совпадает")
-    void getUserInfoAfterRegistration() {
+    void userInfoAfterRegistrationTest() {
         // 1. Получить данные пользователя
         UserSession session = getSession();
         ApiClient api = session.getApiClient();
@@ -123,7 +123,7 @@ public class GameTests {
     @Test
     @DisplayName("Получение информации о пользователе после добавления игры")
     @Description("Добавляем игру и проверяем, что она отображается в информации пользователя")
-    void getUserInfoAfterAddingGame() {
+    void userInfoAfterAddingGameTest() {
         // 1. Получить данные пользователя
         UserSession session = getSession();
         ApiClient api = session.getApiClient();
